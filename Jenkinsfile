@@ -19,8 +19,7 @@ pipeline {
             } 
        stage('Build image'){
           steps{
-             sh '''docker build -t ${IMAGE_NAME} .
-                docker compose up'''             
+             sh '''docker build -t ${IMAGE_NAME} .'''             
              echo 'Docker image built successfully'
              sh 'docker image ls'
             }
